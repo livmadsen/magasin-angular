@@ -1,0 +1,21 @@
+<input type="text" ng-model="search" class="search-query" placeholder="Search">
+
+<a href="#/new"><i class="icon-plus-sign">Add new</i></a></th>
+
+<div ng-repeat="issue in issues | filter:search | orderBy:'name'">
+	<div class="issue item">
+	 	<a class="edit" href="#/edit/{{issue.$id}}"><i class="icon-pencil">edit</i></a>
+		<h1>{{issue.issueTitle}}</h1>
+		<h2>{{issue.issueTeaser}}</h2>
+
+		<div class="theme item" ng-repeat="theme in issue.themes">
+			<h3>{{theme.themeTitle}}</h3>
+			<p>{{theme.themeTeaser}}</p>
+			<div class="article item" ng-repeat="article in theme.articles">
+				<h3>{{article.articleTitle}}</h3>
+				<p>{{article.articleTeaser}}</p>
+				<p>{{article.articleContent}}</p>
+			</div>
+		</div>
+	</div>
+</div>

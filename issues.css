@@ -1,0 +1,21 @@
+.edit {
+	float: right;
+}
+
+.item {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px dashed #ddd;
+}
+
+.issue {
+	background-color: #ddd;
+}
+
+.theme {
+	background-color: #eee;
+}
+
+.article {
+	background-color: #fff;
+}
